@@ -1,0 +1,15 @@
+---
+- name: Job template 2
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Display sample output
+      ansible.builtin.debug:
+        msg: "Display Job Template 2"
+    - ansible.builtin.set_stats:
+        job_template_2_output: "Output from Job Template 2"
+
+    - name: Accessing job template 1 set_stats variable
+      ansible.builtin.debug:
+        msg: "{{ job_template_1_output }}"
+

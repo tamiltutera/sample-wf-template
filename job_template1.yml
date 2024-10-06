@@ -1,0 +1,11 @@
+---
+- name: Job template 1
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Display sample output
+      ansible.builtin.debug:
+        msg: "Display Job Template 1"
+    - ansible.builtin.set_stats:
+        job_template_1_output: "Output from Job Template 1"
+
