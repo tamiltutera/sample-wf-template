@@ -17,7 +17,4 @@
       ansible.builtin.debug:
         msg: "{{ job_template_1_output }}"
 
-    - name: Accessing job template 2 set_stats variable
-      ansible.builtin.debug:
-        msg: "{{ job_template_2_output }}"
 
