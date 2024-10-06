@@ -7,5 +7,7 @@
       ansible.builtin.debug:
         msg: "Display Job Template 1"
     - ansible.builtin.set_stats:
-        job_template_1_output: "Output from Job Template 1"
+        data:
+          job_template_1_output: "Output from Job Template 1"
+        aggregate: True
 
