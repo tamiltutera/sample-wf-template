@@ -6,7 +6,8 @@
     - name: Display sample output
       ansible.builtin.debug:
         msg: "Display Job Template 1"
-    - ansible.builtin.set_stats:
+    - name: Aggregating packages_installed stat per host
+      ansible.builtin.set_stats:
         data:
           job_template_1_output: "Output from Job Template 1"
         aggregate: True
