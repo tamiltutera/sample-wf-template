@@ -6,9 +6,11 @@
     - name: Display sample output
       ansible.builtin.debug:
         msg: "Display Job Template 2"
-    - name: Accessing job template 2 set_stats variable
+    - name: Initializing job template 2 set_stats variable
       ansible.builtin.set_stats:
-        job_template_2_output: "Output from Job Template 2"
+        data:
+          job_template_2_output: "Output from Job Template 2"
+        
 
     - name: Accessing job template 1 set_stats variable
       ansible.builtin.debug:
